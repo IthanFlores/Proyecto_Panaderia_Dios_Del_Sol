@@ -10,34 +10,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <h1 id="Titulo" , class="titulo">PANADERIA ISA</h1>
-    <ul>
-        <li>
-            <a href="">index.html
-                Home
-            </a>
-        </li>
-<li>
-    <a href="php/screens php/panes.php">Panes</a>
-</li>
-        <li>
-            <a href="#Departamento">
-                Departamento
-            </a>
-        </li>
-        <li>
-            <a href="encargados.html">
-                Encargados
-            </a>
-        </li>
-        <li>
-            <a href="recetas.html">
-                Recetas
-            </a>
-        </li>
-    </ul>
-=======
     <div id="Encabezado">
         <h1 id="Titulo" , class="titulo">PANADERIA ISA</h1>
 
@@ -73,16 +45,23 @@
         </ul>
     </div>
 
-    <form action="POST">
-        <p>Nombre </p>
-        <input type="text" name="Nombre" value="" placeholder="coloca tu nombre">
-        <p> email </p>
-        <input type="email" name="Correo Electronico" placeholder="coloca tu email">
-        <input type="submit" value=":)">
+    <form action="POST" class="Contacto">
+        <p>Nombre</p>
+        <input type="text" name="Nombre" class="contacto_input" placeholder="Escribe tu nombre" required>
+        <p> Apelldios</p>
+        <input type="text" name="Apellidos" class="contacto_input" placeholder="Escribe tu apellido" required>
+        <p>Telefono</p>
+        <input type="tel" name="Telefono" class="contacto_input" placeholder="Escribe tu telefono" required>
+        <p> Fecha de nacimiento</p>
+        <input type="date" name="Fecha de nacimiento" class="contacto_input" required>
+        <p> Correo Electronico </p>
+        <input type="email" name="Email" class="contacto_input" placeholder="Escribe tu Email" required>
+        <p> Contraseña </p>
+        <input type="password" name="Contraseña" class="contacto_input" placeholder="Escribe tu contraseña" required>
+        <input type="submit" value="Enviar" class="input_nombre">
+
     </form>
-    <p> Bienvenido al sitio web de la Panaderia " Isa" estamos encantados de empezar a trabajar contigo, revisa la
-        barra de menus para acceder a todas las funciones disponibles.</p>
->>>>>>> 60421cc5432832ddccbffec101175a2fea04f101
+
 </body>
 
 </html>
