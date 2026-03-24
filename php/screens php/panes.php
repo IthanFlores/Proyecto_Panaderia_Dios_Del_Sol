@@ -5,7 +5,7 @@ require_once '../conexiones.php';
 $sql = "SELECT * FROM tb_panes";
 $busqueda_activa = false;
 
-if(isset($_GET['buscar_id']) && !empty($_GET['buscar_id'])){
+if (isset($_GET['buscar_id']) && !empty($_GET['buscar_id'])) {
     $busqueda = $_GET['buscar_id'];
     // Corregido: añadimos el $ a busqueda
     $sql = "SELECT * FROM tb_panes WHERE id_pan LIKE '%$busqueda%'";
@@ -20,7 +20,7 @@ $totalPanes = $restotal->fetch_assoc()['total'];
 
 //Muestra los panes artesanales
 $resArtesanal = $conexion->query('SELECT COUNT(*) as total FROM tb_panes WHERE tipo_elaboracion ="Artesanal"');
-$totalArtesanales =$resArtesanal->fetch_assoc()['total'];
+$totalArtesanales = $resArtesanal->fetch_assoc()['total'];
 
 //Muestra los panes compuestos
 $resCompuesto = $conexion->query('SELECT COUNT(*) as total FROM tb_panes WHERE tipo_elaboracion = "Compuesto"');
@@ -28,18 +28,20 @@ $totalCompuestos = $resCompuesto->fetch_assoc()['total'];
 
 //Mensajes del estado de las conexiones
 $mensajeEstado = '';
-if(isset($_GET['status'])){
-    if($_GET['status'] == 'success') $mensajeEstado = '+1 pane(s) agregados recientemente';
-    if($_GET['status'] == 'deleted') $mensajeEstado = '-1 pane(s) borrados recientemente';
+if (isset($_GET['status'])) {
+    if ($_GET['status'] == 'success') $mensajeEstado = '+1 pane(s) agregados recientemente';
+    if ($_GET['status'] == 'deleted') $mensajeEstado = '-1 pane(s) borrados recientemente';
 }
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Inventario Dios del Sol</title>
-    <link rel="stylesheet" href="assets/css/panes.css"> 
+    <link rel="stylesheet" href="assets/css/panes.css">
 </head>
+
 <body>
     <h1>Gestión de Panes</h1>
     <h3>Gestion de Panes en Panaderia Dios del Sol</h3>
@@ -87,12 +89,12 @@ if(isset($_GET['status'])){
     </nav>
     <br>
 
-    <?php if(isset($_GET['buscar_id'])): ?>
-    <button type="button" onclick="location.href='panes.php'">
-        Ver inventario completo
-    </button>
-    <br><br>
-<?php endif; ?>
+    <?php if (isset($_GET['buscar_id'])): ?>
+        <button type="button" onclick="location.href='panes.php'">
+            Ver inventario completo
+        </button>
+        <br><br>
+    <?php endif; ?>
 
     <table class="inventario-tabla" border="1">
         <thead>
@@ -109,37 +111,39 @@ if(isset($_GET['status'])){
                 <th class="inventario-tabla__encabezado">Encargado de elbaoracion</th>
                 <th class="inventario-tabla__encabezado">De elaboracion costo</th>
                 <th class="inventario-tabla__encabezado">Precio Final</th>
-                <th class="inventario-tabla__encabezado">ACCIONES</th> </tr>
+                <th class="inventario-tabla__encabezado">ACCIONES</th>
+            </tr>
         </thead>
         <tbody>
-            <?php while($fila = mysqli_fetch_array($resultado)){
+            <?php while ($fila = mysqli_fetch_array($resultado)) {
                 $modificador = ($fila['cantidad'] < 5) ? 'inventario-tabla__fila--alerta' : '';
-                ?>
-                
-            <tr class="inventario-tabla__fila <?php echo $modificador ?>">
-                <td class="inventario-tabla__celda"> <?php echo $fila['id_pan'] ?> </td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['departamento'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['tipo_pan'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['descripcion'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['cantidad'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['tamaño'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['ganancia_venta'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['receta'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['tipo_elaboracion'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['encargado_elaboracion'] ?></td>
-                <td class="inventario--tabla__celda"> <?php echo $fila['costo_elaboracion'] ?></td>
-                <td class="inventario-tabla__celda"> <?php echo $fila['precio_final'] ?></td>
-                <td class="inventario-tabla__celda">
-                    <a href="tb_panes/editar.php?id=<?php echo $fila['id_pan']; ?>">
-                        <button class="inventario-tabla__boton inventario-tabla__boton--editar">Editar</button>
-                    </a>
-                    <a href="tb_panes/borrar.php?id=<?php echo $fila['id_pan']; ?>">
-                        <button class ="inventario-tabla__boton inventario-tabla__boton--borrar">Borrar</button>
-                    </a>
-                </td>
-            </tr>
+            ?>
+
+                <tr class="inventario-tabla__fila <?php echo $modificador ?>">
+                    <td class="inventario-tabla__celda"> <?php echo $fila['id_pan'] ?> </td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['departamento'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['tipo_pan'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['descripcion'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['cantidad'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['tamaño'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['ganancia_venta'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['receta'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['tipo_elaboracion'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['encargado_elaboracion'] ?></td>
+                    <td class="inventario--tabla__celda"> <?php echo $fila['costo_elaboracion'] ?></td>
+                    <td class="inventario-tabla__celda"> <?php echo $fila['precio_final'] ?></td>
+                    <td class="inventario-tabla__celda">
+                        <a href="tb_panes/editar.php?id=<?php echo $fila['id_pan']; ?>">
+                            <button class="inventario-tabla__boton inventario-tabla__boton--editar">Editar</button>
+                        </a>
+                        <a href="tb_panes/borrar.php?id=<?php echo $fila['id_pan']; ?>">
+                            <button class="inventario-tabla__boton inventario-tabla__boton--borrar">Borrar</button>
+                        </a>
+                    </td>
+                </tr>
             <?php } ?>
         </tbody>
     </table>
 </body>
+
 </html>
