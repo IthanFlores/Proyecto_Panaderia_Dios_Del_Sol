@@ -10,41 +10,44 @@
 </head>
 
 <body>
-    <div id="Encabezado">
-        <h1 id="Titulo" , class="titulo">PANADERIA ISA</h1>
+    <header id="Encabezado">
+        <nav id="Menu">
+            <div class=nav_titulo>
+                <h1 class="titulo">PANADERIA ISA</h1>
 
-        <img src="/assets/images/logo_panaderia.png" alt="es el logo tonto" title="logo xd" id="img_logo">
-    </div>
-    <div id="Enlaces">
-        <ul id="Menu">
-            <li class="item_menu">
-                <a href="index.html" title="Regresa al menu principal">
-                    Home
-                </a>
-            </li>
-            <li class="item_menu">
-                <a href="#Panes" title="Crea nuevos tipos de pan">
-                    Panes
-                </a>
-            </li>
-            <li class="item_menu">
-                <a href="#Departamento" title="Visualiza tus opciones">
-                    Departamento
-                </a>
-            </li>
-            <li class="item_menu">
-                <a href="encargados.html" title="Ve a la gente chambeadora">
-                    Encargados
-                </a>
-            </li>
-            <li class="item_menu">
-                <a href="recetas.html" title="Mira las recetas">
-                    Recetas
-                </a>
-            </li>
-        </ul>
-    </div>
-
+                <img src="/assets/images/logo_panaderia.png" alt="Logo de panaderia Isa" title="logo" class="img_logo">
+            </div>
+            <div class="nav_menu">
+                <ul id="nav_list">
+                    <li class="list_item">
+                        <a href="index.html" title="Regresa al menu principal" class="item_menu">
+                            Home
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#Panes" title="Crea nuevos tipos de pan" class="item_menu">
+                            Panes
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#Departamento" title="Visualiza tus opciones" class="item_menu">
+                            Departamento
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="encargados.html" title="Ve a la gente chambeadora" class="item_menu">
+                            Encargados
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="recetas.html" title="Mira las recetas" class="item_menu">
+                            Recetas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </Header>
     <form action="POST">
         <p>Nombre </p>
         <input type="text" name="Nombre" value="" placeholder="coloca tu nombre">
