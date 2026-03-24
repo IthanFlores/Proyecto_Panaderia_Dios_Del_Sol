@@ -9,7 +9,7 @@ $base_datos = "panaderia_isa";
 $conexion = new mysqli($servidor, $usuario, $password, $base_datos);
 
 //Verificar la conexion
-if($conexion->connect_error) {
+if ($conexion->connect_error) {
     die("Fallo en la conexión" . $conexion->connect_error);
 }
 
