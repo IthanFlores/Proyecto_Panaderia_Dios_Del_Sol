@@ -1,21 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
 a {
     text-decoration: none;
+}
+
+
+#Encabezado {
+    width: 100vw;
+    height: 5em;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #fe3;
+    border-bottom: 5px solid #b84;
 }
 
 .titulo {
     color: rgb(227, 148, 0);
     font-family: Montserrat;
     font-weight: 900;
-    text-align: center;
-
+    text-align: left;
+    margin: 15px 20px;
 }
 
 .nav_titulo {
-    background: brown;
+
+    margin: 0;
+    padding: 1px;
+
+
+
 }
 
 .nav_menu {
-    background: rgb(255, 125, 36)
+    margin: 0;
+    padding: 3px;
+
 }
 
 .img_logo {
@@ -64,23 +87,39 @@ a {
 }
 
 #Eslogan {
+    width: 100vw;
+    box-sizing: border-box;
     background-image: url('/assets/images/carruselPan1.jpg');
     background-size: cover;
-    padding: 10px;
-    opacity: 50%;
+    margin: 0;
+    background-attachment: fixed;
+
 }
 
 
 .eslogan_bienvenida {
     font-family: Montserrat;
-    color: #000;
+    font-size: 2rem;
+    color: #fff;
     text-transform: uppercase;
+    margin: 0 1.5em;
 }
 
 .eslogan {
     font-family: Montserrat;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
+    margin: 1em 3em;
+    letter-spacing: 5px;
+
+}
+
+.opaco {
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+    margin: 0;
+    padding: 30px;
 }
 
 .button_panes {
@@ -89,6 +128,7 @@ a {
     border-radius: 50px;
     padding: 10px;
     font-family: Montserrat;
+    margin: 0 3.5em;
 
 }
 
@@ -103,10 +143,12 @@ a {
     width: 160px;
     height: 160px;
     border-radius: 10px;
+    margin: 1rem;
     box-sizing: border-box;
-    margin: 10px 0px;
     border-color: #999;
     border-style: solid;
+    font-size: 10px;
+
 }
 
 .div_target {
@@ -119,7 +161,7 @@ a {
     text-align: left;
     margin: 0px 10px;
     font-family: montserrat;
-    font-size: 10px;
+    font-size: 1em;
 
 }
 
