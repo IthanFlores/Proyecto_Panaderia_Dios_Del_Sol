@@ -7,6 +7,7 @@
     <title>Panaderia Isa good</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/contacto.css">
 </head>
 
 <body>
@@ -46,20 +47,21 @@
     </div>
 
     <form action="POST" class="Contacto">
-        <p class="contacto_p">Nombre</p>
-        <input type="text" name="Nombre" class="contacto_input" placeholder="Escribe tu nombre" required>
-        <p class="contacto_p"> Apellidos</p>
-        <input type="text" name="Apellidos" class="contacto_input" placeholder="Escribe tu apellido" required>
-        <p class="contacto_p">Telefono</p>
-        <input type="tel" name="Telefono" class="contacto_input" placeholder="Escribe tu telefono" required>
-        <p class="contacto_p"> Fecha de nacimiento</p>
-        <input type="date" name="Fecha de nacimiento" class="contacto_input" required>
-        <p class="contacto_p"> Correo Electronico </p>
-        <input type="email" name="Email" class="contacto_input" placeholder="Escribe tu Email" required>
-        <p class="contacto_p"> Contraseña </p>
-        <input type="password" name="Contraseña" class="contacto_input" placeholder="Escribe tu contraseña" required>
-        <input type="submit" value="Enviar" class="contacto_input input_submit">
-
+        <div class="form_div">
+            <p class="contacto_p">Nombre Completo</p>
+            <input type="text" name="Nombre" class="contacto_input" placeholder="Escribe tu nombre" required>
+        </div>
+        <div class="form_div">
+            <p class="contacto_p">Telefono</p>
+            <input type="tel" name="Telefono" class="contacto_input" placeholder="Escribe tu telefono" required>
+        </div>
+        <div class="form_div">
+            <p class="contacto_p"> Correo Electronico </p>
+            <input type="email" name="Email" class="contacto_input" placeholder="Escribe tu Email" required>
+        </div>
+        <div class="form_div form_submit">
+            <input type="submit" value="Enviar" class="input_submit">
+        </div>
     </form>
 
 </body>
