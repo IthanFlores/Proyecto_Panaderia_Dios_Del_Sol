@@ -46,22 +46,54 @@
         </ul>
     </div>
 
+
+
     <form action="POST" class="Contacto">
-        <div class="form_div">
-            <p class="contacto_p">Nombre Completo</p>
-            <input type="text" name="Nombre" class="contacto_input" placeholder="Escribe tu nombre" required>
+        <div class="form_title">
+            <h2> FORMULARIO DE CONTACTO </h2>
         </div>
         <div class="form_div">
-            <p class="contacto_p">Telefono</p>
-            <input type="tel" name="Telefono" class="contacto_input" placeholder="Escribe tu telefono" required>
+            <label class="contacto_p" for="nombre">Nombre Completo </label>
+            <input type="text" name="Nombre" class="contacto_input" id="nombre" placeholder="emiliano zapatero"
+                required>
+
+        </div>
+
+        <div class="form_div">
+            <label class="contacto_p" for="email"> Correo Electronico </label>
+            <input type="email" name="Email" class="contacto_input" id="email" placeholder="ejemplo@gmail.com" required>
+
         </div>
         <div class="form_div">
-            <p class="contacto_p"> Correo Electronico </p>
-            <input type="email" name="Email" class="contacto_input" placeholder="Escribe tu Email" required>
+            <label class="contacto_p" for="tipo-usuario">Tipo de usuario</label>
+            <select name="type-of-user" id="tipo-usuario" class="contacto_select" required>
+                <option value="user1"> Cliente </option>
+                <option value="user2"> Proveedor </option>
+                <option value="user3"> Inversor </option>
+                <option value="user4"> Empleado </option>
+            </select>
+
+        </div>
+        <div class="form_div">
+            <label class="contacto_p" for="destino">Persona a la que va dirigida</label>
+            <input type="text" placeholder="el guau guau" class="contacto_input" list="destinatario" id="destino">
+            <datalist name="persona-destinataria" id="destinatario" class="contacto_select" required>
+                <option value="Emiliano"> El guau guau </option>
+                <option value="Emmanuel"> El de la isla</option>
+                <option value="Ithan"> el ezquisofrenico </option>
+                <option value="Diego"> el sexy </option>
+            </datalist>
+
+        </div>
+        <div class="form_div">
+            <label class="contacto_p" for="mensaje"> Mensaje </label>
+            <textarea rows="5" name="comentario" class="contacto_textarea" id="mensaje"
+                placeholder="Escribe tu mensaje...." required></textarea>
         </div>
         <div class="form_div form_submit">
             <input type="submit" value="Enviar" class="input_submit">
         </div>
+
     </form>
 
 </body>
