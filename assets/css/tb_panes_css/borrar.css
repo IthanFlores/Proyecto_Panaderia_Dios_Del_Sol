@@ -1,0 +1,115 @@
+:root {
+    --grosor-borde: 4px;
+    --color-borde: #999;
+    --color-foco: #BC4749; /* Rojo para indicar peligro en esta pantalla */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.screen_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrado vertical para formularios cortos */
+    padding: 50px;
+    background-color: #F7E6A2;
+    background-image: url("../../img/delete_panes.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #2D241E;
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #BC4749; /* Color de advertencia */
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.35);
+    /* EfectoGlassmorphism */
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    /* Borde tipo cristal */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    height: 420px;
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #2D241E;
+    margin-bottom: -5px;
+    font-size: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: var(--grosor-borde) solid var(--color-borde);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background-color: #FFF9F1;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--color-foco);
+    box-shadow: 0 0 10px rgba(188, 71, 73, 0.2);
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    margin: 12px;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-borrar {
+    background-color: #BC4749;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #7D6B5D;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}

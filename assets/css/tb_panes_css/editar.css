@@ -1,0 +1,128 @@
+:root {
+    --grosor-borde: 4px;
+    /* Grosor editable como solicitó */
+    --color-borde: #999;
+    --color-foco: #D4A373;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.screen_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #F7E6A2;
+    background-image: url("../../img/edit_pan.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center !important;
+    font-size: 3rem !important;
+    /* Ajustado de 10rem a algo profesional */
+    color: #2D241E;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: center !important;
+    font-size: 2rem !important;
+    color: #252424;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.35);
+    /* Aplicamos el efecto Glassmorphism o de cristal*/
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    /* Borde de estilo vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #2D241E;
+    margin-bottom: -5px;
+    font-size: 1.5rem;
+    font-weight: bolder ;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+
+    border: var(--grosor-borde) solid rgba(153, 153, 153, 0.3);
+    border-radius: 10px;
+    background-color: #FFF9F1;
+    outline: none;
+    transition: 0.3s;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Efecto de iluminación al enfocar un campo */
+input:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Se vuelve más sólido al escribir */
+    border-color: var(--color-foco);
+    box-shadow: 0 0 15px rgba(212, 163, 115, 0.4);
+}
+
+.input-readonly {
+    background-color: #eee !important;
+    cursor: not-allowed;
+}
+
+button {
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+button[type="submit"] {
+    background-color: #588157;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #BC4749;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}

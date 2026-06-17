@@ -1,0 +1,253 @@
+html {
+    font-size: 62.5%;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    background-color: #fe79;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main_header {
+    background-color: #fc2;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #a53;
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+
+
+.menu {
+    display: inline-flex;
+
+
+}
+
+.menu_list {
+    margin: 0 0.5rem;
+
+}
+
+.list_item {
+    list-style: none;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+
+}
+
+.link {
+    text-decoration: none;
+    color: #a53;
+    font-size: 2rem;
+
+
+}
+
+.list_item:hover {
+    transform: scale(1.05);
+
+}
+
+.link:hover {
+    color: #c75;
+}
+
+.img_logo {
+    width: 8rem;
+    margin: 0 2rem;
+}
+
+
+.hero_section {
+    background-image: url(/assets/img/carruselPan1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 62rem;
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(to bottom, #000, transparent);
+    box-sizing: border-box;
+    backdrop-filter: blur(16px);
+    color: #fff;
+    height: 100%;
+}
+
+.title_h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin: 2rem;
+}
+
+.text_information {
+    font-size: 2rem;
+
+    margin: 2rem;
+}
+
+.button_comun {
+    background-color: #fe8;
+    padding: 2rem;
+    border-style: none;
+    border-radius: 3rem;
+    font-weight: bold;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+
+}
+
+.button_comun:hover {
+    transform: scale(1.05);
+}
+
+.link_style {
+    color: #e74;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.img_target {
+    width: 100%;
+    height: 12rem;
+    border-radius: 7px 7px 0 0;
+
+}
+
+.section_targets {
+    text-align: center;
+    margin-top: 5rem;
+
+}
+
+.title_h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.div_targets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.target {
+    box-sizing: border-box;
+
+    width: 25rem;
+    height: 35rem;
+    border-radius: 10px;
+    margin: 3rem;
+
+    border-color: #999;
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+    box-shadow: 2px 0 4px #0007;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.target:hover {
+    transform: translateY(-10px);
+}
+
+.div_img_target {
+
+
+    align-items: center;
+
+
+
+}
+
+.div_information {
+    text-align: center;
+    margin: 0px 10px;
+    font-family: montserrat;
+    font-size: 3em;
+    text-transform: uppercase;
+
+}
+
+.link_pan {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.text_pan {
+    text-align: left;
+}
+
+
+
+
+.button_more {
+    background-color: #fa3;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border-style: none;
+    color: #Fff;
+    padding: 5px 10px;
+    margin-top: 3rem;
+    font-size: 2rem;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+
+}
+
+.button_more:hover {
+    transform: scale(1.1);
+}
+
+
+.footer_container {
+    background-color: #334;
+    padding: 3.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.error h3 {
+    font-size: 4rem;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 68vh;
+}
+
+.error_img {
+    width: 20rem;
+}

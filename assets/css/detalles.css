@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/bg_detalles.png");
+    background-color: rgba(243, 157, 18, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tabla-detalles {
+    color: #333333;
+    font-weight: 900;
+
+    border-style: none;
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+
+    background-color: rgba(247, 230, 162, 0.282);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(247, 230, 162, 0.211);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: color 0.3 ease;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-detalles th {
+    border-style: none;
+    background: #f39c12;
+    color: black;
+    padding: 12px;
+    text-align: left;
+
+    background-color: rgba(243, 156, 18, 0.282);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(243, 156, 18, 0.211);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: color 0.3 ease;
+}
+
+.tabla-detalles td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-volver {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}

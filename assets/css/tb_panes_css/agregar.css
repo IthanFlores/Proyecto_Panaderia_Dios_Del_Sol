@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen__principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #F7E6A2;
+    background-image: url("../../img/add_panes.png");
+    background-size: cover !important;
+    background-attachment: fixed;
+}
+
+.title_Register {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    margin: 30px;
+    font-size: 3.0rem;
+    font-weight: 900;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.35);
+    /*Efecto Glassmorphism o de cristal*/
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    /*Borde que da un efecto de vidrio*/
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    gap: 15px;
+}
+
+/* Estilo de las etiquetas (los Labels) */
+label {
+    font-weight: 600;
+    color: #2D241E;
+    margin-bottom: -5px;
+    font-size: 1.6rem;
+}
+
+
+:root {
+    /* valores para el grosor (1px, 3px, 5px, etc.) para ajustar todo el formulario */
+    --grosor-borde: 4px; 
+    
+    /* Colores del poderosa panaderia Dios del Sol */
+    --color-borde: #999;
+    --color-foco: #D4A373;
+}
+
+
+/* Campos de entrada, Selects y Textareas */
+input[type="text"],
+input[type="number"],
+select {
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 12px 15px;
+    
+    /* Aplicamos la variable del borde aquí */
+    border: var(--grosor-borde) solid rgba(153, 153, 153, 0.3);
+    
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    color: #2D241E;
+}
+
+/* Efecto de iluminación al enfocar un campo */
+input:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.9); /* Se vuelve más sólido al escribir */
+    border-color: var(--color-foco);
+    box-shadow: 0 0 15px rgba(212, 163, 115, 0.4);
+}
+
+/* Estilo de los botones */
+button {
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: #588157;
+    /* Verde éxito */
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #BC4749;
+    /* Rojo cancelar */
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
