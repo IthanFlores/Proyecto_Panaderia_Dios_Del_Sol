@@ -172,3 +172,9 @@ else if (isset($_POST['accion']) && $_POST['accion'] == 'registrar_receta') {
         die("Error detectado al guardar la receta: " . $stmt->error);
     }
 }
+
+
+//==> Registro de personal <==
+else if (isset($_POST['accion']) && $_POST['accion'] == 'registrar_personal') {
+    
+}
