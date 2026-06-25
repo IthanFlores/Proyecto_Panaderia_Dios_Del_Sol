@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* eliminamos márgenes residuales del navegador */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F7E6A2;
+}
+
+.screen_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #F7E6A2;
+    background-image: url("../../img/tb_panaderos_img/buscar_personal.png");
+    background-size:
+        cover 500px 100vh;
+    background-position:
+        center,
+        bottom center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 20px 0;
+    font-size: 5rem !important;
+
+    font-weight: bold;
+    color: #2D241E;
+}
+
+h3 {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 10px 0 30px 0;
+    font-size: 3.5rem !important;
+    font-weight: normal;
+    color: #7D6B5D;
+    -webkit-text-stroke: 1px black;
+}
+
+form {
+    background: rgba(0, 150, 100, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* Borde luminoso que da el efecto de vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #2D241E;
+    margin-bottom: -5px;
+    font-size: 1.1rem;
+}
+
+:root {
+    /* valores para el grosor (1px, 3px, 5px, etc.) para ajustar todo el formulario */
+    --grosor-borde: 4px;
+
+    /* Colores del poderosa panaderia Dios del Sol */
+    --color-borde: #999;
+    --color-foco: #D4A373;
+}
+
+/* Campos de entrada, Selects y Textareas */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+
+    /* Aplicamos la variable del borde aquí */
+    border: var(--grosor-borde) solid var(--color-borde);
+
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #FFF9F1;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--color-foco);
+    box-shadow: 0 0 8px rgba(212, 163, 115, 0.3);
+}
+
+button {
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: #588157;
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #BC4749;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}

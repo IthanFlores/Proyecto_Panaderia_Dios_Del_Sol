@@ -113,12 +113,12 @@ else if ($_POST['accion'] == 'editar_pan') {
         $desc,
         $cantidad,
         $tam,
-        $gan_ven,      
+        $gan_ven,
         $rec,
         $tipo_elab,
         $encargado_elab,
-        $costo_elab,     
-        $precio_fin,     
+        $costo_elab,
+        $precio_fin,
         $id
     );
 
@@ -176,5 +176,100 @@ else if (isset($_POST['accion']) && $_POST['accion'] == 'registrar_receta') {
 
 //==> Registro de personal <==
 else if (isset($_POST['accion']) && $_POST['accion'] == 'registrar_personal') {
-    
+    //Extraemos los registros de tb_personal
+    $id_personal = $_POST['id_personal'] ?? '';
+    $nombre_per = $_POST['nombre_per'] ?? '';
+    $telefono_per = $_POST['telefono_per'] ?? 0;
+    $correo_per = $_POST['correo_per'] ?? '';
+    $direccion_per = $_POST['direccion_per'] ?? '';
+    $puesto_per = $_POST['puesto_per'] ?? '';
+    $salario_per = (int)($_POST['salario_per'] ?? 0);
+    $fecha_ingreso = $_POST['fecha_ingreso'] ?? '';
+    $estado_per = $_POST['estado_per'] ?? '';
+
+    //==> Query introduction <==
+    $query = "INSERT INTO tb_personal (id_personal, nombre_per, telefono_per, correo_per, direccion_per, puesto_per, salario_per, fecha_ingreso, estado_per) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $conexion->prepare($query);
+
+    if ($stmt == false) {
+        die("fallo en la conexion de la tabla de personal:" . $conexion->error);
+    }
+
+    $stmt->bind_param(
+        "ssssssiss",
+        $id_personal,
+        $nombre_per,
+        $telefono_per,
+        $correo_per,
+        $direccion_per,
+        $puesto_per,
+        $salario_per,
+        $fecha_ingreso,
+        $estado_per
+    );
+
+    if ($stmt->execute()) {
+        header("Location: screens%20php/personal.php?status=success");
+        exit();
+    } else {
+        die("Error detectado al guardar la receta: " . $stmt->error);
+    }
+}
+
+//==> Borrar de tb_personal <==
+else if ($_POST['accion'] == 'borrar_personal') {
+    $id_personal = $_POST['id_personal'];
+
+    //==> Esto es lo que borra <==
+    $query = "DELETE FROM tb_personal WHERE id_personal = ?";
+
+    $stmt = $conexion->prepare($query);
+    $stmt->bind_param("s", $id_personal);
+
+    if ($stmt->execute()) {
+        //Regresar a tb_personal
+        header("location: screens%20php/personal.php?status=deleted");
+        exit();
+    } else {
+        die("Error en la aeliminación del personal:" . $stmt->error);
+    }
+}
+
+//==> Editar Personal <==
+else if ($_POST['accion'] == 'editar_personal') {
+    $id_per = $_POST['id_personal'];
+    $nom_per = $_POST['nombre_per'];
+    $tel_per = $_POST['telefono_per'];
+    $cr_per = $_POST['correo_per'];
+    $dir_per = $_POST['direccion_per'];
+    $pues_per = $_POST['puesto_per'];
+    $sal_per = $_POST['salario_per'];
+    $fec_in = $_POST['fecha_ingreso'];
+    $estd_per = $_POST['estado_per'];
+
+    $query = "UPDATE tb_personal SET nombre_per=?, telefono_per=?, correo_per=?, direccion_per=?, puesto_per=?, salario_per=?, fecha_ingreso=?, estado_per=? WHERE id_personal=?";
+
+    $stmt = $conexion->prepare($query);
+
+    $stmt->bind_param(
+        "sssssisss",
+        $nom_per,
+        $tel_per,
+        $cr_per,
+        $dir_per,
+        $pues_per,
+        $sal_per,
+        $fec_in,
+        $estd_per,
+        $id_per
+    );
+
+    if ($stmt->execute()) {
+        header("Location: screens%20php/personal.php?status=updated");
+        exit();
+    } else {
+        die("Fallo en la actualización: " . $stmt->error);
+    }
 }
